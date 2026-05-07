@@ -1,4 +1,3 @@
-package finalProject;
 import java.util.Scanner;
 public class MenuSystem {
     static Scanner input=new Scanner(System.in);
@@ -27,7 +26,7 @@ public class MenuSystem {
                     depositMoney();
                     break;
                 case 3:
-                    withdrawMoney();
+                    withdrawMoney.run();
                     break;
                 case 4:
                     checkBalance();

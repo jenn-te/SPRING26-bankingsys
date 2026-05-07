@@ -1,0 +1,50 @@
+import java.util.Scanner;
+public class withdrawMoney {
+    public static void run() {
+
+    Scanner input = new Scanner(System.in);
+
+    int amount = 0;
+    int balance = checkBalance.getBalance(); // placeholder for now
+
+    System.out.println("Available Balance: " + balance); // will change 'balance' variable  later
+    
+    System.out.println("Select amount to withdraw: \n1. $20\n2. $50\n3. $100\n4. Other");
+
+    int options = input.nextInt();
+    switch(options){
+        case 1: 
+        amount = 20;
+        break;
+        case 2: 
+        amount = 50;
+        break;
+        case 3:
+        amount = 100;
+        break;
+        case 4:
+        System.out.println("Enter withdrawal amount: ");
+        amount = input.nextInt();
+        break;
+        default:
+            System.out.println("Invalid Option.");
+            return;
+    }
+    
+
+    if(amount <= 0) {
+    System.out.println("Can't withdraw a negative amount.");
+} 
+    else if(amount > 500) {
+    System.out.println("Amount can't exceed $500.");
+}
+    else if(amount > balance) {
+    System.out.println("Not enough funds.");
+}
+    else {
+    balance -= amount;
+    System.out.println("New balance: " + balance);
+}
+
+}
+}

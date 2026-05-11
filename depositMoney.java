@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class DepositMoney{
+public class depositMoney{
     public static void run(){
         Scanner input=new Scanner(System.in);
         int amount=0;

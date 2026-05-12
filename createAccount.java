@@ -15,7 +15,7 @@ public class createAccount {
       System.out.print("Enter starting balance: "); 
        double balance = input.nextDouble(); 
 
- 
+        // need to create account class 
        Account newAccount = new Account(name, accNum, balance); 
 
        // Adding account to ArrayList 

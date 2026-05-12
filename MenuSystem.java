@@ -1,5 +1,7 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 public class MenuSystem {
+    static ArrayList<Account> accounts = new ArrayList<>();
     static Scanner input=new Scanner(System.in);
 
        public static void main(String[]args){
@@ -20,16 +22,16 @@ public class MenuSystem {
             choice=getValidChoice();
             switch(choice){
                 case 1:
-                    createAccount();
+                    createAccount.run(accounts);
                     break;
                 case 2:
-                    depositMoney();
+                    depositMoney.run(accounts);
                     break;
                 case 3:
-                    withdrawMoney.run();
+                    withdrawMoney.run(accounts);
                     break;
                 case 4:
-                    checkBalance();
+                    checkBalance.run(accounts);
                     break;
                 case 5:
                     System.out.println("Thank you for using the bank system. Goodbye!");

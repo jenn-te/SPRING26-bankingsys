@@ -5,7 +5,7 @@ public class withdrawMoney {
     Scanner input = new Scanner(System.in);
 
     System.out.println("Enter account number: ");
-    String accountNumber = input.next();
+    int accNum = input.next();
 
     int amount = 0;
     //int balance = 1000; // testing

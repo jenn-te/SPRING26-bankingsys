@@ -7,6 +7,8 @@ public class withdrawMoney {
     System.out.println("Enter account number: ");
     int accNum = input.next();
 
+        // compare to whats in the account array thing
+
     int amount = 0;
     //int balance = 1000; // testing
     int balance = checkBalance.getBalance(accountNumber); 

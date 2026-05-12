@@ -1,7 +1,24 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 public class depositMoney{
-    public static void run(){
+    public static void run(ArrayList<Account> accounts){
         Scanner input=new Scanner(System.in);
+
+    System.out.println("Enter account number: ");
+    int accNum = input.nextInt();
+
+
+    boolean found = false;
+    for (int i = 0; i < accounts.size() ; i++) { 
+        if (accounts.get(i).getAccNum() == accNum) {
+            found = true; 
+        }
+    }
+    if(!found) {
+        System.out.println("Account not found."); 
+        return;
+    }
+
         int amount=0;
         int balance=BankAccount.getBalance();
         System.out.println("\nCurrent Balance:  $"+balance);

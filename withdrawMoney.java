@@ -1,17 +1,29 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 public class withdrawMoney {
-    public static void run() {
+    public static void run(ArrayList<Account> accounts) {
 
     Scanner input = new Scanner(System.in);
 
     System.out.println("Enter account number: ");
-    int accNum = input.next();
+    int accNum = input.nextInt();
 
-        // compare to whats in the account array thing
+
+    boolean found = false;
+    for (int i = 0; i < accounts.size() ; i++) { // grabs each account in the list and checks if it matches what the user types
+        if (accounts.get(i).getAccNum() == accNum) {
+            found = true; // if the numbers match, it stops going through list of account numbers
+            break;
+        }
+    }
+    if(!found) {
+        System.out.println("Account not found."); // if the account number entereed doesn't match, the user goes back to the menu
+        return;
+    }
 
     int amount = 0;
     //int balance = 1000; // testing
-    int balance = checkBalance.getBalance(accountNumber); 
+    int balance = checkBalance.getBalance(accNum); 
 
     System.out.println("\nAvailable Balance: " + balance); // will change 'balance' variable  later
     

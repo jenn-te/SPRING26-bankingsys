@@ -70,16 +70,5 @@ public class MenuSystem {
             
 
     }
-    public static void createAccount(){
-        System.out.println("\nCreate Account ");
-    }
-    public static void withdrawMoney(){
-        System.out.println("\nWithdraw Money");
-    }
-    public static void checkBalance(){
-        System.out.println("\nCheck Balance");
-    }
-    public static void depositMoney(){
-        System.out.println("\nDeposit money");
-    }
+
 }

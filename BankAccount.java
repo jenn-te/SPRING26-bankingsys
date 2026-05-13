@@ -1,4 +1,4 @@
-public class BankAccount {
+/* public class BankAccount {
     private static int balance=1000;
     public static int getBalance(){
         return balance;
@@ -8,3 +8,4 @@ public class BankAccount {
     }
     
 }
+    for testing */

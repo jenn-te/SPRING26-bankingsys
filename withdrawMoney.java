@@ -10,21 +10,21 @@ public class withdrawMoney {
     int accNum = input.nextInt();
 
 
-    boolean found = false;
+    Account targetAccount = null;
     for (int i = 0; i < accounts.size() ; i++) { // grabs each account in the list and checks if it matches what the user types
         if (accounts.get(i).getAccNum() == accNum) {
-            found = true; // if the numbers match, it stops going through list of account numbers
+            targetAccount = accounts.get(i); // if the numbers match, it stops going through list of account numbers
             break;
         }
     }
-    if(!found) {
+    if(targetAccount == null) {
         System.out.println("Account not found."); // if the account number entereed doesn't match, the user goes back to the menu
         return;
     }
 
     int amount = 0;
-    //int balance = 1000; // testing
-    int balance = checkBalance.getBalance(accNum); 
+    //int balance = 1000; testing
+    double balance = targetAccount.getBalance(); 
 
     System.out.println("\nAvailable Balance: " + balance); // will change 'balance' variable  later
     

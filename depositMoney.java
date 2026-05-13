@@ -1,6 +1,6 @@
 //rafah
-import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Scanner;
 public class depositMoney{
     public static void run(ArrayList<Account> accounts){
         Scanner input=new Scanner(System.in);
@@ -9,19 +9,17 @@ public class depositMoney{
     int accNum = input.nextInt();
 
 
-    boolean found = false; // jennifer
+    Account targetAccount = null; //jennifer
     for (int i = 0; i < accounts.size() ; i++) { 
         if (accounts.get(i).getAccNum() == accNum) {
-            found = true; 
-        }
+            targetAccount = accounts.get(i); 
     }
-    if(!found) {
+    if(targetAccount == null) {
         System.out.println("Account not found."); 
-        return;
     }
 
         int amount=0;
-        int balance=BankAccount.getBalance();
+        double balance=targetAccount.getBalance();
         System.out.println("\nCurrent Balance:  $"+balance);
         System.out.println("Select amount to deposit: ");
         System.out.println("1. $20");
@@ -64,7 +62,7 @@ public class depositMoney{
         switch(confirmation){
             case "Y":
                 balance+=amount;
-                BankAccount.setBalance(balance);
+                targetAccount.setBalance(balance);
                 System.out.println("$"+amount+"deposited successfully. ");
                 break;
             case "N":
@@ -79,4 +77,5 @@ public class depositMoney{
 
 
     }
+}
 }

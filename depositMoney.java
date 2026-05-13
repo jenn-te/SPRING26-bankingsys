@@ -9,7 +9,7 @@ public class depositMoney{
     int accNum = input.nextInt();
 
 
-    boolean found = false;
+    boolean found = false; // jennifer
     for (int i = 0; i < accounts.size() ; i++) { 
         if (accounts.get(i).getAccNum() == accNum) {
             found = true; 

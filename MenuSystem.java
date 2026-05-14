@@ -2,7 +2,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 public class MenuSystem {
-    static ArrayList<Account> accounts = new ArrayList<>();
+    static ArrayList<Account> accounts = new ArrayList<>(); // used in every method so they can all access the array
     static Scanner input=new Scanner(System.in);
 
        public static void main(String[]args){
